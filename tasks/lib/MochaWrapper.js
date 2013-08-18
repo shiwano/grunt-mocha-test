@@ -44,6 +44,7 @@ function MochaWrapper(params) {
       var mochaOptions = mocha.options;
       var mochaRunner = new Mocha.Runner(mochaSuite);
       var mochaReporter = new mocha._reporter(mochaRunner);
+      Mocha.reporters.Base.useColors = true !== mochaOptions.noColors;
       mochaRunner.ignoreLeaks = false !== mochaOptions.ignoreLeaks;
       mochaRunner.asyncOnly = mochaOptions.asyncOnly;
       if (mochaOptions.grep) {

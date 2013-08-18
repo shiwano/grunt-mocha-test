@@ -51,6 +51,7 @@ The following mocha options are supported
 - growl
 - globals
 - require
+- noColors
 
 ### Generating coverage reports
 
